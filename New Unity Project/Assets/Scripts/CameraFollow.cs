@@ -28,11 +28,11 @@ public class Camerafollow : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
-        if (target)
+        if(target)
         {
-            float targetX = Mathf.Max (levelMinX, Mathf.Min(levelMaxX, target.position.x));
+            float targetX = Mathf.Max(levelMinX, Mathf.Min(levelMaxX, target.position.x));
 
             float x = Mathf.SmoothDamp(transform.position.x, targetX, ref smoothDampVelocity.x, smoothDampTime);
 

@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 103438, guid: a2921b55bcf164853960c853662332ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 466550, guid: a2921b55bcf164853960c853662332ad, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -255,6 +259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 7, y: 0}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!4 &466195868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 466550, guid: a2921b55bcf164853960c853662332ad, type: 3}
@@ -389,6 +396,10 @@ PrefabInstance:
     - target: {fileID: 124218, guid: 4ba430f162f394ec89163bcf70a24ee8, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 124218, guid: 4ba430f162f394ec89163bcf70a24ee8, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 414000, guid: 4ba430f162f394ec89163bcf70a24ee8, type: 3}
       propertyPath: m_RootOrder
