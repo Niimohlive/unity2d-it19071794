@@ -16,11 +16,11 @@ public class Camerafollow : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        camHeight = Camera.main.orthographicSize = 2;
-        camWidth = camHeight = Camera.main.aspect;
+        camHeight = Camera.main.orthographicSize * 2;
+        camWidth = camHeight * Camera.main.aspect;
 
-        float leftBoundsWidth = leftBounds.GetComponentInChildren<SpriteRenderer> ().bounds.size.x / 2;
-        float rightBoundsWidth = rightBounds.GetComponentInChildren<SpriteRenderer> ().bounds.size.x / 2;
+        float leftBoundsWidth = leftBounds.GetComponentInChildren<SpriteRenderer>().bounds.size.x/2;
+        float rightBoundsWidth = rightBounds.GetComponentInChildren<SpriteRenderer>().bounds.size.x/2;
 
         levelMinX = leftBounds.position.x + leftBoundsWidth + (camWidth/2);
         levelMaxX = rightBounds.position.x - rightBoundsWidth - (camWidth/2);
@@ -32,12 +32,13 @@ public class Camerafollow : MonoBehaviour {
     {
         if(target)
         {
-            float targetX = Mathf.Max(levelMinX, Mathf.Min(levelMaxX, target.position.x));
+            float targetX = Mathf.Max(levelMinX, Mathf.Min(levelMaxX,target.position.x));
 
             float x = Mathf.SmoothDamp(transform.position.x, targetX, ref smoothDampVelocity.x, smoothDampTime);
 
             transform.position = new Vector3(x, transform.position.y, transform.position.z);
 
+          
         }
           
     }
