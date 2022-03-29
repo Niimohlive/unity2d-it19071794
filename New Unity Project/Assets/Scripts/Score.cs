@@ -24,7 +24,7 @@ public class Score : MonoBehaviour
         {
             ScoreNum += 1;
             Destroy(Coin.gameObject);
-            MyscoreText.text = "Score" + ScoreNum;
+            MyscoreText.text = "Score: " + ScoreNum;
         }
     }
 
